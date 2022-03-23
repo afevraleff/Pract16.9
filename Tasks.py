@@ -8,18 +8,18 @@ class Figures:
         self.rad = rad
     def __str__(self):
         if self.type == "Rectangle":
-            print(f"{self.type}({self.x}, {self.y}, {self.width}, {self.height})")
+            return f"{self.type}({self.x}, {self.y}, {self.width}, {self.height})"
         elif self.type == "Circle":
-            print(f"{self.type}({self.x}, {self.y}, {self.rad})")
+            return f"{self.type}({self.x}, {self.y}, {self.rad})"
         elif self.type == "Square":
-            print(f"{self.type}({self.x}, {self.y}, {self.width})")
+            return f"{self.type}({self.x}, {self.y}, {self.width})"
 
 Rect1 = Figures("Rectangle", 1, 2, 10, 100)
-Rect1.__str__()
-Circ1 = Figures("Circle", 0, 1, 0, 0, 10)
-Circ1.__str__()
+print(Rect1)
+Circ1 = Figures("Circle", 0, 1, rad=10)
+print(Circ1)
 Squ1 = Figures('Square', 1, 1, 10)
-Squ1.__str__()
+print(Squ1)
 
 class Rectangle:
     def __init__(self, x0, y0, x1, y1, x2, y2):
